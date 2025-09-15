@@ -90,7 +90,7 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
                 kind="email"
                 parts={["ronlund91", "hotmail", "com"]}
                 display="ronlund91 [at] hotmail [dot] com"
-                className="text-[12px] leading-none tracking-[0.14em] text-neutral-200 underline underline-offset-2 decoration-neutral-400/60 hover:decoration-neutral-200 transition"
+                className="text-[12px] leading-none tracking-[0.14em] text-neutral-700 underline underline-offset-2 decoration-neutral-400/60 hover:decoration-neutral-700 transition"
               />
             </div>
           </div>

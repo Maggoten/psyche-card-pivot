@@ -52,9 +52,9 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
           <div className="absolute inset-0 ring-1 ring-white/70 shadow-inner" />
 
           {/* Content */}
-          <div className="relative h-full w-full px-10 md:px-16">
+          <div className="relative h-full w-full px-10 md:px-16 py-9">
             {/* Top row */}
-            <div className="pt-9 flex items-start justify-between">
+            <div className="flex items-start justify-between">
               <ObfuscatedContact
                 kind="tel"
                 parts={["+46", "79", "076", "6694"]}
@@ -82,7 +82,7 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
             </div>
 
             {/* Bottom row */}
-            <div className="pb-9 flex items-end justify-between">
+            <div className="flex items-end justify-between">
               <div className="text-[11px] leading-5 tracking-[0.16em] text-neutral-500">
                 DROTTNINGHOLMSVÄGEN 342, 168&nbsp;73 BROMMA • ORGNR: 559127-9640
               </div>
@@ -90,7 +90,7 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
                 kind="email"
                 parts={["ronlund91", "hotmail", "com"]}
                 display="ronlund91 [at] hotmail [dot] com"
-                className="text-[12px] tracking-[0.14em] text-neutral-700 underline underline-offset-4 decoration-neutral-400/60 hover:decoration-neutral-700 transition"
+                className="text-[12px] leading-none tracking-[0.14em] text-neutral-700 underline underline-offset-2 decoration-neutral-400/60 hover:decoration-neutral-700 transition"
               />
             </div>
           </div>

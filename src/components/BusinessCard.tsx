@@ -52,9 +52,9 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
           <div className="absolute inset-0 ring-1 ring-white/70 shadow-inner" />
 
           {/* Content */}
-          <div className="relative h-full w-full px-10 md:px-16 py-9">
+          <div className="relative h-full w-full px-10 md:px-16 py-9 flex flex-col justify-between">
             {/* Top row */}
-            <div className="flex items-start justify-between">
+            <div className="flex items-center justify-between">
               <ObfuscatedContact
                 kind="tel"
                 parts={["+46", "79", "076", "6694"]}
@@ -72,7 +72,7 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
             </div>
 
             {/* Center */}
-            <div className="h-[55%] flex flex-col items-center justify-center text-center">
+            <div className="flex flex-col items-center justify-center text-center">
               <div className="font-serif text-[36px] md:text-[40px] leading-tight text-neutral-900 tracking-[0.06em]">
                 RON LUND
               </div>
@@ -82,7 +82,7 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
             </div>
 
             {/* Bottom row */}
-            <div className="flex items-baseline justify-between">
+            <div className="flex items-end justify-between">
               <div className="text-[11px] leading-none tracking-[0.16em] text-neutral-500">
                 DROTTNINGHOLMSVÄGEN 342, 168&nbsp;73 BROMMA • ORGNR: 559127-9640
               </div>

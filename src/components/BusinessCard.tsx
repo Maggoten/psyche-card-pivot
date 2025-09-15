@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface BusinessCardProps {
   className?: string;
@@ -37,11 +38,13 @@ function ObfuscatedContact({
 }
 
 const BusinessCard = ({ className = "" }: BusinessCardProps) => {
+  const isMobile = useIsMobile();
+  
   return (
-    <div className={`min-h-screen w-full flex items-center justify-center p-4 ${className}`}>
+    <div className={`h-screen w-full flex items-center justify-center overflow-hidden ${isMobile ? 'p-2' : 'p-4'} ${className}`}>
       {/* Card wrapper with standard business card aspect ratio */}
-      <div className="relative w-[95vw] max-w-[840px] aspect-[7/4]">
-        <div className="absolute inset-0 bg-[#F7F6F4] ring-1 ring-neutral-300/60 shadow-[0_10px_30px_rgba(0,0,0,0.10)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.25)] transition-all duration-300 hover:scale-[1.02] overflow-hidden">
+      <div className={`relative ${isMobile ? 'w-[96vw] max-w-[96vw]' : 'w-[95vw] max-w-[840px]'} aspect-[7/4] ${isMobile ? 'scale-90' : ''}`}>
+        <div className={`absolute inset-0 bg-[#F7F6F4] ring-1 ring-neutral-300/60 shadow-[0_15px_40px_rgba(0,0,0,0.15)] ${!isMobile ? 'hover:shadow-[0_25px_70px_rgba(0,0,0,0.3)] hover:scale-[1.02]' : ''} transition-all duration-300 overflow-hidden`}>
           {/* Subtle paper texture */}
           <div className="absolute inset-0 bg-[radial-gradient(120%_80%_at_20%_0%,#ffffff_0%,#f3f2f0_60%,#eeedeb_100%)] opacity-[0.9]" />
           <div className="absolute inset-0 opacity-[0.06] mix-blend-multiply pointer-events-none" style={{
@@ -59,13 +62,13 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
                 kind="tel"
                 parts={["+46", "79", "076", "6694"]}
                 display="079 076 66 94"
-                className="font-serif text-[18px] tracking-[0.02em] text-neutral-900"
+                className={`font-serif ${isMobile ? 'text-[16px]' : 'text-[18px]'} tracking-[0.02em] text-neutral-900 ${isMobile ? 'min-h-[44px] flex items-center' : ''} ${!isMobile ? 'hover:text-neutral-700' : ''} transition-colors active:text-neutral-600`}
               />
               <div className="text-right">
-                <div className="text-[22px] md:text-[24px] font-serif tracking-[0.12em] uppercase text-neutral-900">
+                <div className={`${isMobile ? 'text-[20px]' : 'text-[22px] md:text-[24px]'} font-serif tracking-[0.12em] uppercase text-neutral-900`}>
                   PREFORM IT
                 </div>
-                <div className="mt-1 text-[15.5px] tracking-[0.24em] uppercase text-neutral-500">
+                <div className={`mt-1 ${isMobile ? 'text-[14px]' : 'text-[15.5px]'} tracking-[0.24em] uppercase text-neutral-500`}>
                   Data and Form
                 </div>
               </div>
@@ -73,24 +76,24 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
 
             {/* Center */}
             <div className="flex flex-col items-center justify-center text-center">
-              <div className="font-serif text-[36px] md:text-[40px] leading-tight text-neutral-900 tracking-[0.06em]">
+              <div className={`font-serif ${isMobile ? 'text-[32px]' : 'text-[36px] md:text-[40px]'} leading-tight text-neutral-900 tracking-[0.06em]`}>
                 RON LUND
               </div>
-              <div className="mt-2 text-[13px] tracking-[0.38em] uppercase text-neutral-500">
+              <div className={`mt-2 ${isMobile ? 'text-[12px]' : 'text-[13px]'} tracking-[0.38em] uppercase text-neutral-500`}>
                 Developer
               </div>
             </div>
 
             {/* Bottom row */}
             <div className="flex items-end justify-between">
-              <div className="text-[11px] leading-none tracking-[0.16em] text-neutral-500">
+              <div className={`${isMobile ? 'text-[10px]' : 'text-[11px]'} leading-none tracking-[0.16em] text-neutral-500`}>
                 DROTTNINGHOLMSVÄGEN 342, 168&nbsp;73 BROMMA • ORGNR: 559127-9640
               </div>
               <ObfuscatedContact
                 kind="email"
                 parts={["ron.lund", "preformit", "se"]}
                 display="ron.lund [at] preformit [dot] se"
-                className="text-[11px] leading-none tracking-[0.14em] text-neutral-700 underline underline-offset-2 decoration-neutral-400/60 hover:decoration-neutral-700 transition"
+                className={`${isMobile ? 'text-[10px] min-h-[44px] flex items-center' : 'text-[11px]'} leading-none tracking-[0.14em] text-neutral-700 underline underline-offset-2 decoration-neutral-400/60 ${!isMobile ? 'hover:decoration-neutral-700' : ''} transition active:decoration-neutral-700`}
               />
             </div>
           </div>

@@ -3,19 +3,15 @@ import Navigation from "@/components/Navigation";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
+    <div className="h-screen bg-white overflow-hidden">
       {/* Header */}
       <header className="hide-on-mobile-landscape pt-8 md:pt-12">
         <Navigation className="mb-8 md:mb-12" />
       </header>
 
       {/* Main Content */}
-      <main className="business-card-container px-4 py-8 md:py-12">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex justify-center">
-            <BusinessCard />
-          </div>
-        </div>
+      <main className="business-card-container h-full">
+        <BusinessCard />
       </main>
 
       {/* Footer */}

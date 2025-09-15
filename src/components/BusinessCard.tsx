@@ -7,7 +7,7 @@ interface BusinessCardProps {
 
 const BusinessCard = ({ className = "" }: BusinessCardProps) => {
   return (
-    <Card className={`business-card p-8 md:p-12 max-w-md mx-auto ${className}`}>
+    <Card className={`business-card p-8 md:p-12 max-w-md mx-auto landscape:max-w-2xl landscape:aspect-[1.75/1] ${className}`}>
       <div className="text-center space-y-6">
         {/* Logo */}
         <div className="flex justify-center mb-8">

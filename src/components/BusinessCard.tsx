@@ -88,8 +88,8 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
               </div>
               <ObfuscatedContact
                 kind="email"
-                parts={["ronlund91", "hotmail", "com"]}
-                display="ronlund91 [at] hotmail [dot] com"
+                parts={["ron.lund", "preformit", "se"]}
+                display="ron.lund [at] preformit [dot] se"
                 className="text-[11px] leading-none tracking-[0.14em] text-neutral-700 underline underline-offset-2 decoration-neutral-400/60 hover:decoration-neutral-700 transition"
               />
             </div>

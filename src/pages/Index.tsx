@@ -1,6 +1,5 @@
 import BusinessCard from "@/components/BusinessCard";
 import Navigation from "@/components/Navigation";
-import PartnersSection from "@/components/PartnersSection";
 
 const Index = () => {
   return (
@@ -13,16 +12,8 @@ const Index = () => {
       {/* Main Content */}
       <main className="business-card-container px-4 py-8 md:py-12">
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Business Card - Always visible */}
-            <div className="order-2 lg:order-1">
-              <BusinessCard />
-            </div>
-
-            {/* Partners Section - Hidden on mobile landscape */}
-            <div className="order-1 lg:order-2 hide-on-mobile-landscape">
-              <PartnersSection />
-            </div>
+          <div className="flex justify-center">
+            <BusinessCard />
           </div>
         </div>
       </main>

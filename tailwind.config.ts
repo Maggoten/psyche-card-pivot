@@ -55,6 +55,7 @@ export default {
           DEFAULT: "hsl(var(--business-card-bg))",
           border: "hsl(var(--business-card-border))",
         },
+        'business-phone': "hsl(var(--business-phone))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

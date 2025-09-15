@@ -41,7 +41,7 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
     <div className={`min-h-screen w-full flex items-center justify-center p-4 ${className}`}>
       {/* Card wrapper with wider aspect ratio */}
       <div className="relative w-[95vw] max-w-[960px] aspect-[7/3.8]">
-        <div className="absolute inset-0 rounded-[18px] bg-[#F7F6F4] ring-1 ring-neutral-300/60 shadow-[0_10px_30px_rgba(0,0,0,0.10)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.25)] transition-all duration-300 hover:scale-[1.02] overflow-hidden">
+        <div className="absolute inset-0 bg-[#F7F6F4] ring-1 ring-neutral-300/60 shadow-[0_10px_30px_rgba(0,0,0,0.10)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.25)] transition-all duration-300 hover:scale-[1.02] overflow-hidden">
           {/* Subtle paper texture */}
           <div className="absolute inset-0 bg-[radial-gradient(120%_80%_at_20%_0%,#ffffff_0%,#f3f2f0_60%,#eeedeb_100%)] opacity-[0.9]" />
           <div className="absolute inset-0 opacity-[0.06] mix-blend-multiply pointer-events-none" style={{
@@ -49,7 +49,7 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
               "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/><feComponentTransfer><feFuncA type='table' tableValues='0 0.6'/></feComponentTransfer></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\")",
             backgroundSize: "220px 220px",
           }} />
-          <div className="absolute inset-0 rounded-[18px] ring-1 ring-white/70 shadow-inner" />
+          <div className="absolute inset-0 ring-1 ring-white/70 shadow-inner" />
 
           {/* Content */}
           <div className="relative h-full w-full px-10 md:px-16">

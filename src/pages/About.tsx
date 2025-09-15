@@ -13,7 +13,7 @@ const About = () => {
       <section className="px-4 pb-8 md:pb-12">
         <div className="max-w-4xl mx-auto">
           <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-border/20">
-            <h2 className="font-display text-2xl md:text-3xl font-medium tracking-tight text-foreground mb-6">
+            <h2 className="font-display text-2xl md:text-3xl font-medium tracking-tight text-foreground mb-6 text-center">
               About Us
             </h2>
             <div className="space-y-4 text-muted-foreground font-body leading-relaxed">

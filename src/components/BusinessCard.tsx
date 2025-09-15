@@ -33,31 +33,6 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
           Professional IT Solutions
         </p>
 
-        {/* Partners */}
-        <div className="pt-6">
-          <p className="font-body text-xs text-muted-foreground uppercase tracking-widest mb-4">
-            Partners
-          </p>
-          <div className="flex items-center justify-center space-x-8">
-            <a 
-              href="https://www.adobe.com/home"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs font-medium text-foreground tracking-wide hover:text-primary transition-colors"
-            >
-              Adobe
-            </a>
-            <div className="w-px h-4 bg-border"></div>
-            <a 
-              href="https://www.microsoft.com/sv-se/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs font-medium text-foreground tracking-wide hover:text-primary transition-colors"
-            >
-              Microsoft
-            </a>
-          </div>
-        </div>
 
         {/* Contact Information */}
         <div className="pt-6 space-y-2">

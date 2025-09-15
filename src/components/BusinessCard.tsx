@@ -65,7 +65,7 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
                 <div className="text-[22px] md:text-[24px] font-serif tracking-[0.12em] uppercase text-neutral-900">
                   PREFORM IT
                 </div>
-                <div className="mt-1 text-[12px] tracking-[0.32em] uppercase text-neutral-500">
+                <div className="mt-1 text-[16px] tracking-[0.24em] uppercase text-neutral-500">
                   Data and Form
                 </div>
               </div>

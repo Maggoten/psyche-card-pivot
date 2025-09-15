@@ -6,7 +6,7 @@ interface NavigationProps {
 
 const Navigation = ({ className = "" }: NavigationProps) => {
   return (
-    <nav className={`flex justify-center gap-4 ${className}`}>
+    <nav className={`flex justify-center gap-2 ${className}`}>
       <Button 
         variant="secondary" 
         size="sm" 

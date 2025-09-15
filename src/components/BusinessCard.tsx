@@ -82,15 +82,15 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
             </div>
 
             {/* Bottom row */}
-            <div className="flex items-end justify-between">
-              <div className="text-[11px] leading-5 tracking-[0.16em] text-neutral-500">
+            <div className="flex items-baseline justify-between">
+              <div className="text-[11px] leading-none tracking-[0.16em] text-neutral-500">
                 DROTTNINGHOLMSVÄGEN 342, 168&nbsp;73 BROMMA • ORGNR: 559127-9640
               </div>
               <ObfuscatedContact
                 kind="email"
                 parts={["ronlund91", "hotmail", "com"]}
                 display="ronlund91 [at] hotmail [dot] com"
-                className="text-[12px] leading-none tracking-[0.14em] text-neutral-700 underline underline-offset-2 decoration-neutral-400/60 hover:decoration-neutral-700 transition"
+                className="text-[11px] leading-none tracking-[0.14em] text-neutral-700 underline underline-offset-2 decoration-neutral-400/60 hover:decoration-neutral-700 transition"
               />
             </div>
           </div>

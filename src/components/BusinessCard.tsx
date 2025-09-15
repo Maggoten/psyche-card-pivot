@@ -82,7 +82,7 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
             </div>
 
             {/* Bottom row */}
-            <div className="pb-8 flex items-end justify-between">
+            <div className="pb-9 flex items-end justify-between">
               <div className="text-[11px] leading-5 tracking-[0.16em] text-neutral-500">
                 DROTTNINGHOLMSVÄGEN 342, 168&nbsp;73 BROMMA • ORGNR: 559127-9640
               </div>

@@ -39,8 +39,8 @@ function ObfuscatedContact({
 const BusinessCard = ({ className = "" }: BusinessCardProps) => {
   return (
     <div className={`min-h-screen w-full flex items-center justify-center p-4 ${className}`}>
-      {/* Card wrapper with wider aspect ratio */}
-      <div className="relative w-[95vw] max-w-[960px] aspect-[7/3.8]">
+      {/* Card wrapper with standard business card aspect ratio */}
+      <div className="relative w-[95vw] max-w-[840px] aspect-[7/4]">
         <div className="absolute inset-0 bg-[#F7F6F4] ring-1 ring-neutral-300/60 shadow-[0_10px_30px_rgba(0,0,0,0.10)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.25)] transition-all duration-300 hover:scale-[1.02] overflow-hidden">
           {/* Subtle paper texture */}
           <div className="absolute inset-0 bg-[radial-gradient(120%_80%_at_20%_0%,#ffffff_0%,#f3f2f0_60%,#eeedeb_100%)] opacity-[0.9]" />

@@ -72,7 +72,7 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
             </div>
 
             {/* Center */}
-            <div className="h-[55%] flex flex-col items-center justify-center text-center -mt-2">
+            <div className="h-[55%] flex flex-col items-center justify-center text-center">
               <div className="font-serif text-[36px] md:text-[40px] leading-tight text-neutral-900 tracking-[0.06em]">
                 RON LUND
               </div>

@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import PreFormITLogo from "@/assets/PreFormITLogo.svg";
 
 interface BusinessCardProps {
   className?: string;
@@ -8,13 +9,13 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
   return (
     <Card className={`business-card p-8 md:p-12 max-w-md mx-auto ${className}`}>
       <div className="text-center space-y-6">
-        {/* Logo/Icon */}
+        {/* Logo */}
         <div className="flex justify-center mb-8">
-          <div className="w-16 h-16 bg-primary rounded-sm flex items-center justify-center">
-            <div className="w-10 h-10 border-2 border-primary-foreground rounded-sm flex items-center justify-center">
-              <div className="w-3 h-3 bg-primary-foreground rounded-sm"></div>
-            </div>
-          </div>
+          <img 
+            src={PreFormITLogo} 
+            alt="PreForm IT Logo" 
+            className="h-16 w-auto object-contain"
+          />
         </div>
 
         {/* Company Name */}

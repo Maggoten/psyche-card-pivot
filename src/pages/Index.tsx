@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 
 const Index = () => {
   return (
-    <div className="h-screen bg-white overflow-hidden">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="hide-on-mobile-landscape pt-8 md:pt-12">
         <Navigation className="mb-8 md:mb-12" />

@@ -39,9 +39,14 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
             Partners
           </p>
           <div className="flex items-center justify-center space-x-8">
-            <div className="text-xs font-medium text-foreground tracking-wide">
+            <a 
+              href="https://www.adobe.com/home"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-medium text-foreground tracking-wide hover:text-primary transition-colors"
+            >
               Adobe
-            </div>
+            </a>
             <div className="w-px h-4 bg-border"></div>
             <div className="text-xs font-medium text-foreground tracking-wide">
               Microsoft

@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import PreFormITLogo from "@/assets/PreFormITLogo.svg";
+import PreFormITLogo from "@/assets/PreFormITLogo_noText.svg";
 
 interface BusinessCardProps {
   className?: string;

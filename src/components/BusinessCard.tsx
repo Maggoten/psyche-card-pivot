@@ -10,9 +10,9 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
     <Card className={`business-card p-8 md:p-12 max-w-4xl mx-auto landscape:max-w-5xl landscape:aspect-[9/5] ${className}`}>
       <div className="h-full flex flex-col justify-between">
         {/* Top Row */}
-        <div className="flex justify-between items-start">
+        <div className="flex justify-between items-center">
           {/* Phone Number - Left */}
-          <div className="text-business-phone font-body text-lg md:text-xl font-medium tracking-wide">
+          <div className="text-foreground font-body text-lg md:text-xl font-medium tracking-wide">
             0790766694
           </div>
           

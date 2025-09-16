@@ -44,7 +44,7 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
     <div className={`${isMobile ? 'min-h-screen landscape:h-screen landscape:overflow-hidden' : 'h-screen overflow-hidden'} w-full flex items-center justify-center ${isMobile ? 'p-2 py-8 landscape:py-2' : 'p-4'} ${className}`}>
       {/* Card wrapper with standard business card aspect ratio */}
       <div className={`relative ${isMobile ? 'w-[96vw] max-w-[96vw] landscape:scale-90' : 'w-[95vw] max-w-[840px]'} aspect-[7/4]`}>
-        <div className={`absolute inset-0 bg-[#F7F6F4] ring-1 ring-neutral-300/60 shadow-[0_15px_40px_rgba(0,0,0,0.15)] ${!isMobile ? 'hover:shadow-[0_25px_70px_rgba(0,0,0,0.3)] hover:scale-[1.02]' : ''} transition-all duration-300 overflow-hidden`}>
+        <div className={`absolute inset-0 bg-[#F0EEE2] ring-1 ring-neutral-300/60 shadow-[0_15px_40px_rgba(0,0,0,0.15)] ${!isMobile ? 'hover:shadow-[0_25px_70px_rgba(0,0,0,0.3)] hover:scale-[1.02]' : ''} transition-all duration-300 overflow-hidden`}>
           {/* Subtle paper texture */}
           <div className="absolute inset-0 bg-[radial-gradient(120%_80%_at_20%_0%,#ffffff_0%,#f3f2f0_60%,#eeedeb_100%)] opacity-[0.9]" />
           <div className="absolute inset-0 opacity-[0.06] mix-blend-multiply pointer-events-none" style={{
@@ -62,7 +62,7 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
                 kind="tel"
                 parts={["+46", "79", "076", "6694"]}
                 display="079 076 66 94"
-                className={`font-serif ${isMobile ? 'text-[16px]' : 'text-[18px]'} tracking-[0.02em] text-neutral-900 ${isMobile ? 'min-h-[44px] flex items-center' : ''} ${!isMobile ? 'hover:text-neutral-700' : ''} transition-colors active:text-neutral-600`}
+                className={`font-didot ${isMobile ? 'text-[16px]' : 'text-[18px]'} tracking-[0.02em] text-neutral-900 ${isMobile ? 'min-h-[44px] flex items-center' : ''} ${!isMobile ? 'hover:text-neutral-700' : ''} transition-colors active:text-neutral-600`}
               />
               <div className="text-right">
                 <div className={`${isMobile ? 'text-[20px]' : 'text-[22px] md:text-[24px]'} font-serif tracking-[0.12em] uppercase text-neutral-900`}>

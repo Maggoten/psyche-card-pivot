@@ -6,7 +6,7 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="hide-on-mobile-landscape pt-8 md:pt-12">
-        <Navigation className="mb-8 md:mb-12" />
+        <Navigation className="mb-4 md:mb-6" />
       </header>
 
       {/* Main Content */}

@@ -6,7 +6,7 @@ const About = () => {
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
       {/* Header */}
       <header className="hide-on-mobile-landscape pt-8 md:pt-12">
-        <Navigation className="mb-8 md:mb-12" />
+        <Navigation className="mb-4 md:mb-6" />
       </header>
 
       {/* About Us Section */}

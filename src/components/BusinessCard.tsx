@@ -57,7 +57,7 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
           {/* Content */}
           <div className="relative h-full w-full px-10 md:px-16 py-9 flex flex-col justify-between">
             {/* Top row */}
-            <div className="flex items-center justify-between">
+            <div className="flex items-start justify-between">
               <ObfuscatedContact
                 kind="tel"
                 parts={["+46", "79", "076", "6694"]}

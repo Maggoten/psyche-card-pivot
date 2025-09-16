@@ -37,12 +37,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="hide-on-mobile-landscape pb-8 text-center">
-        <p className="text-xs text-muted-foreground font-body tracking-wide">
-          Professional IT Solutions
-        </p>
-      </footer>
     </div>
   );
 };

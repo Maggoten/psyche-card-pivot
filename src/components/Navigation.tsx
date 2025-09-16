@@ -26,6 +26,15 @@ const Navigation = ({ className = "" }: NavigationProps) => {
           About
         </Button>
       </Link>
+      <Link to="/contact">
+        <Button 
+          variant="outline" 
+          size="sm" 
+          className="font-body text-xs uppercase tracking-widest px-6 py-2 h-auto rounded-sm"
+        >
+          Contact
+        </Button>
+      </Link>
     </nav>
   );
 };

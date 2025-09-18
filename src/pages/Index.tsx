@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import PreFormITLogo from "@/assets/PreFormITLogo_noText.svg";
 
 const Index = () => {
   return (
@@ -14,6 +15,14 @@ const Index = () => {
       <section className="px-4 pb-8 md:pb-12">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-card/50 backdrop-blur-sm rounded-lg p-8 md:p-12 border border-border/20 mb-8">
+            {/* Logo */}
+            <div className="flex justify-center mb-6">
+              <img 
+                src={PreFormITLogo} 
+                alt="PreForm IT Logo" 
+                className="w-16 h-24 opacity-70 text-foreground"
+              />
+            </div>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-foreground mb-6">
               Digital Transformation
               <span className="block text-muted-foreground">Made Simple</span>

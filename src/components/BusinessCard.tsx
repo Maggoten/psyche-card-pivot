@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
-import PreFormITLogo from "@/assets/PreFormITLogo_noText.svg";
 
 interface BusinessCardProps {
   className?: string;
@@ -105,14 +104,6 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
 
             {/* Center */}
             <div className="flex flex-col items-center justify-center text-center">
-              {/* Logo */}
-              <div className="mb-4">
-                <img 
-                  src={PreFormITLogo} 
-                  alt="PreForm IT Logo" 
-                  className={`${isMobile ? 'w-8 h-12' : 'w-10 h-16'} opacity-80`}
-                />
-              </div>
               <ObfuscatedText
                 parts={["RON", "LUND"]}
                 display="RON LUND"

@@ -1,9 +1,7 @@
 import Navigation from "@/components/Navigation";
 import PartnersSection from "@/components/PartnersSection";
-
 const About = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
+  return <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
       {/* Header */}
       <header className="hide-on-mobile-landscape pt-8 md:pt-12">
         <Navigation className="mb-4 md:mb-6" />
@@ -109,9 +107,8 @@ const About = () => {
             <h2 className="font-display text-2xl font-medium tracking-tight text-foreground mb-4 text-center">
               Trusted by Leading Organizations
             </h2>
-            <p className="text-muted-foreground font-body leading-relaxed text-center">
-              Over the years, we have partnered with leading institutions such as The Swedish Social Insurance Agency, The Swedish Tax Agency, The Swedish Police, Handelsbanken, and SPP, delivering reliable solutions for forms management and web-based data collection.
-            </p>
+            <p className="text-muted-foreground font-body leading-relaxed text-center">For over a decade, we’ve partnered with leading institutions such as The Swedish Social Insurance Agency, The Swedish Tax Agency, The Swedish Police, Handelsbanken, and SPP supporting their digital transformation journeys.
+Our team helps organizations modernize legacy systems, streamline workflows, and implement secure, webbased data collection platforms. With deep expertise in system integration and program management, we ensure every project is delivered seamlessly, on time, and aligned with strategic goals.</p>
           </div>
         </div>
       </section>
@@ -125,8 +122,6 @@ const About = () => {
         </div>
       </section>
 
-    </div>
-  );
+    </div>;
 };
-
 export default About;

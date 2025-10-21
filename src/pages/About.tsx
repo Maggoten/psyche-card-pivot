@@ -39,35 +39,19 @@ const About = () => {
               </ul>
             </div>
 
-            {/* Forms Management */}
+            {/* Technical Program Manager Consultants */}
             <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-border/20">
               <h2 className="font-display text-2xl font-medium tracking-tight text-foreground mb-4">
-                Forms Management
+                Technical Program Manager Consultants
               </h2>
               <p className="text-muted-foreground font-body leading-relaxed mb-4">
-                Transform complex paper-based forms into intuitive digital experiences. We design and implement form solutions that reduce processing time, eliminate errors, and improve user satisfaction.
+                Our experienced Technical Program Managers provide strategic oversight for complex technology initiatives, ensuring projects are delivered on time, within budget, and aligned with business objectives.
               </p>
               <ul className="text-muted-foreground font-body leading-relaxed list-disc list-inside space-y-2">
-                <li>Digital form design and development</li>
-                <li>Automated validation and processing</li>
-                <li>Multi-channel form deployment</li>
-                <li>Form analytics and optimization</li>
-              </ul>
-            </div>
-
-            {/* Data Collection */}
-            <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-border/20">
-              <h2 className="font-display text-2xl font-medium tracking-tight text-foreground mb-4">
-                Data Collection
-              </h2>
-              <p className="text-muted-foreground font-body leading-relaxed mb-4">
-                Implement robust web-based data collection systems that ensure accuracy, compliance, and accessibility. Our solutions handle everything from simple surveys to complex multi-step data gathering processes.
-              </p>
-              <ul className="text-muted-foreground font-body leading-relaxed list-disc list-inside space-y-2">
-                <li>Web-based data capture platforms</li>
-                <li>Real-time data validation</li>
-                <li>Secure data storage and processing</li>
-                <li>Compliance and regulatory adherence</li>
+                <li>Program planning and execution</li>
+                <li>Cross-functional team leadership</li>
+                <li>Risk assessment and mitigation</li>
+                <li>Stakeholder communication and reporting</li>
               </ul>
             </div>
 
@@ -87,19 +71,35 @@ const About = () => {
               </ul>
             </div>
 
-            {/* Technical Program Manager Consultants */}
+            {/* Data Collection */}
             <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-border/20">
               <h2 className="font-display text-2xl font-medium tracking-tight text-foreground mb-4">
-                Technical Program Manager Consultants
+                Data Collection
               </h2>
               <p className="text-muted-foreground font-body leading-relaxed mb-4">
-                Our experienced Technical Program Managers provide strategic oversight for complex technology initiatives, ensuring projects are delivered on time, within budget, and aligned with business objectives.
+                Implement robust web-based data collection systems that ensure accuracy, compliance, and accessibility. Our solutions handle everything from simple surveys to complex multi-step data gathering processes.
               </p>
               <ul className="text-muted-foreground font-body leading-relaxed list-disc list-inside space-y-2">
-                <li>Program planning and execution</li>
-                <li>Cross-functional team leadership</li>
-                <li>Risk assessment and mitigation</li>
-                <li>Stakeholder communication and reporting</li>
+                <li>Web-based data capture platforms</li>
+                <li>Real-time data validation</li>
+                <li>Secure data storage and processing</li>
+                <li>Compliance and regulatory adherence</li>
+              </ul>
+            </div>
+
+            {/* Forms Management */}
+            <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-border/20">
+              <h2 className="font-display text-2xl font-medium tracking-tight text-foreground mb-4">
+                Forms Management
+              </h2>
+              <p className="text-muted-foreground font-body leading-relaxed mb-4">
+                Transform complex paper-based forms into intuitive digital experiences. We design and implement form solutions that reduce processing time, eliminate errors, and improve user satisfaction.
+              </p>
+              <ul className="text-muted-foreground font-body leading-relaxed list-disc list-inside space-y-2">
+                <li>Digital form design and development</li>
+                <li>Automated validation and processing</li>
+                <li>Multi-channel form deployment</li>
+                <li>Form analytics and optimization</li>
               </ul>
             </div>
           </div>

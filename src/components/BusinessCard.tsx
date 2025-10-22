@@ -17,24 +17,60 @@ function ObfuscatedContact({
   className?: string;
 }) {
   const ref = useRef<HTMLAnchorElement>(null);
+  const [isActivated, setIsActivated] = React.useState(false);
 
   useEffect(() => {
     if (!ref.current) return;
-    if (kind === "email") {
-      const [local, domain, tld] = parts;
-      const addr = `${local}@${domain}.${tld}`;
-      ref.current.href = `mailto:${addr}`;
-      ref.current.textContent = display;
-      ref.current.setAttribute("aria-label", addr);
-    } else {
-      const tel = parts.join("").replace(/[\s-]/g, "");
-      ref.current.href = `tel:${tel}`;
-      ref.current.textContent = display;
-      ref.current.setAttribute("aria-label", display);
-    }
-  }, [kind, parts, display]);
+    
+    // Decode base64 encoded parts
+    const decodedParts = parts.map(p => atob(p));
+    
+    // Add delay to make it harder for bots to scrape
+    const timer = setTimeout(() => {
+      if (!ref.current) return;
+      
+      if (kind === "email") {
+        const [local, domain, tld] = decodedParts;
+        const addr = `${local}@${domain}.${tld}`;
+        ref.current.textContent = display;
+        ref.current.setAttribute("aria-label", addr);
+        ref.current.setAttribute("data-contact", "email");
+        
+        // Only set href when activated (on interaction)
+        if (isActivated) {
+          ref.current.href = `mailto:${addr}`;
+        }
+      } else {
+        const tel = decodedParts.join("").replace(/[\s-]/g, "");
+        ref.current.textContent = display;
+        ref.current.setAttribute("aria-label", display);
+        ref.current.setAttribute("data-contact", "phone");
+        
+        // Only set href when activated (on interaction)
+        if (isActivated) {
+          ref.current.href = `tel:${tel}`;
+        }
+      }
+    }, 150);
 
-  return <a ref={ref} className={className} rel="nofollow noopener" />;
+    return () => clearTimeout(timer);
+  }, [kind, parts, display, isActivated]);
+
+  const handleInteraction = () => {
+    setIsActivated(true);
+  };
+
+  return (
+    <a 
+      ref={ref} 
+      className={className} 
+      rel="nofollow noopener"
+      onMouseEnter={handleInteraction}
+      onTouchStart={handleInteraction}
+      onFocus={handleInteraction}
+      data-obf="true"
+    />
+  );
 }
 
 function ObfuscatedText({
@@ -84,7 +120,7 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
             <div className="flex items-center justify-between">
               <ObfuscatedContact
                 kind="tel"
-                parts={["+46", "79", "076", "6694"]}
+                parts={["KzQ2", "Nzk=", "MDc2", "NjY5NA=="]}
                 display="079 076 66 94"
                 className={`font-didot ${isMobile ? 'text-[16px]' : 'text-[18px]'} tracking-[0.02em] text-neutral-900 ${isMobile ? 'min-h-[44px] flex items-center' : ''} ${!isMobile ? 'hover:text-neutral-700' : ''} transition-colors active:text-neutral-600`}
               />
@@ -125,7 +161,7 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
               />
               <ObfuscatedContact
                 kind="email"
-                parts={["ron.lund", "preformit", "se"]}
+                parts={["cm9uLmx1bmQ=", "cHJlZm9ybWl0", "c2U="]}
                 display="ron.lund [at] preformit [dot] se"
                 className={`${isMobile ? 'text-[10px] min-h-[44px] flex items-center' : 'text-[11px]'} leading-none tracking-[0.14em] text-neutral-700 underline underline-offset-2 decoration-neutral-400/60 ${!isMobile ? 'hover:decoration-neutral-700' : ''} transition active:decoration-neutral-700`}
               />

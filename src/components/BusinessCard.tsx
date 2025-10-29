@@ -101,7 +101,7 @@ const BusinessCard = ({ className = "" }: BusinessCardProps) => {
   const isMobile = useIsMobile();
   
   return (
-    <div className={`${isMobile ? 'h-screen landscape:overflow-hidden' : 'h-screen overflow-hidden'} w-full flex ${isMobile ? 'items-start pt-8 landscape:items-center landscape:pt-2' : 'items-center'} justify-center ${isMobile ? 'p-4 landscape:py-2' : 'p-4'} ${className}`}>
+    <div className={`${isMobile ? 'h-screen landscape:overflow-hidden' : 'h-screen overflow-hidden'} w-full flex ${isMobile ? 'items-start pt-16 landscape:items-center landscape:pt-2' : 'items-center'} justify-center ${isMobile ? 'p-4 landscape:py-2' : 'p-4'} ${className}`}>
       {/* Card wrapper with standard business card aspect ratio */}
       <div className={`relative ${isMobile ? 'w-[96vw] max-w-[96vw] landscape:scale-90' : 'w-[95vw] max-w-[840px]'} aspect-[7/4]`}>
         <div className={`absolute inset-0 bg-[#F0EEE2] ring-1 ring-neutral-300/60 shadow-[0_15px_40px_rgba(0,0,0,0.15)] ${!isMobile ? 'hover:shadow-[0_25px_70px_rgba(0,0,0,0.3)] hover:scale-[1.02]' : ''} transition-all duration-300 overflow-hidden`}>

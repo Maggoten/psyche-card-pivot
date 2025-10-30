@@ -53,3 +53,4 @@ This project is built with:
 force new deploy
 clean redeploy
 redeploy fix
+clean rebuild

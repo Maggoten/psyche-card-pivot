@@ -1,3 +1,8 @@
+# ============================================
+# 🤖 Robots.txt — PreForm IT
+# ============================================
+
+# ✅ Allow full crawling by major bots
 User-agent: Googlebot
 Allow: /
 
@@ -10,5 +15,19 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+# ✅ Default rule for all other bots
 User-agent: *
 Allow: /
+
+# 🔗 Sitemap reference
+Sitemap: https://www.preformit.se/sitemap.xml
+
+# 🧭 Crawl delay (optional, prevents server overload)
+Crawl-delay: 5
+
+# ============================================
+# 💡 Notes:
+# - All pages are crawlable
+# - Sitemap guides crawlers to correct URLs
+# - Works perfectly for a React/Vite SPA
+# ============================================

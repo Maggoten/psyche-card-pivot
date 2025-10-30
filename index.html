@@ -38,20 +38,18 @@
 
     <!-- Performance -->
     <meta http-equiv="x-dns-prefetch-control" content="on">
-    <!-- Self-hosted font: preload for zero-hop LCP -->
     <link rel="preload" href="/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <!-- (Optional) Preload above-the-fold hero if present -->
+    <!-- Optional: Preload hero image -->
     <!-- <link rel="preload" as="image" href="/images/hero.webp" fetchpriority="high"> -->
 
     <!-- Humans -->
     <link rel="author" type="text/plain" href="/humans.txt">
 
-    <!-- Critical CSS (keep tiny) -->
+    <!-- Critical CSS -->
     <style>
       :root { --bg: #0b0d12; --fg: #e9eef5; }
       html, body { height: 100%; margin: 0; }
 
-      /* Font: self-hosted Inter + metric-accurate fallback to minimize CLS */
       @font-face {
         font-family: "Inter";
         src: url("/fonts/inter-var-latin.woff2") format("woff2-variations");
@@ -76,30 +74,55 @@
       }
 
       .skip-link {
-        position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
-      }
-      .skip-link:focus {
-        position: fixed; top: 0; left: 0; z-index: 9999;
-        padding: 1rem 2rem; background: #fff; color: #000; text-decoration: none; font-weight: 600;
-        box-shadow: 0 2px 8px rgba(0,0,0,.3);
+        position: absolute;
+        left: -9999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
       }
 
-      /* Hydration polish */
+      .skip-link:focus {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        padding: 1rem 2rem;
+        background: #fff;
+        color: #000;
+        text-decoration: none;
+        font-weight: 600;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+      }
+
       main[aria-busy="true"] { opacity: .001; }
 
       .noscript-message {
-        padding: 2rem; max-width: 600px; margin: 2rem auto; background: #1a1d24; border-radius: 8px; text-align: center;
+        padding: 2rem;
+        max-width: 600px;
+        margin: 2rem auto;
+        background: #1a1d24;
+        border-radius: 8px;
+        text-align: center;
       }
-      .noscript-message h1 { margin: 0 0 .5rem; color: var(--fg); font-size: 1.25rem; }
-      .noscript-message a { color: #60a5fa; text-decoration: underline; }
 
-      /* Motion-respect for users who prefer reduced motion */
+      .noscript-message h1 {
+        margin: 0 0 .5rem;
+        color: var(--fg);
+        font-size: 1.25rem;
+      }
+
+      .noscript-message a {
+        color: #60a5fa;
+        text-decoration: underline;
+      }
+
       @media (prefers-reduced-motion: reduce) {
         * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
       }
     </style>
 
-    <!-- Security: tight, predictable, production-friendly -->
+    <!-- Security -->
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="Content-Security-Policy" content="
       default-src 'self';
@@ -114,7 +137,7 @@
       upgrade-insecure-requests;
     ">
 
-    <!-- Structured Data (ProfessionalService + WebSite with Sitelinks) -->
+    <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -123,8 +146,6 @@
       "url": "https://www.preformit.se/",
       "logo": "https://www.preformit.se/icons/icon-192.png",
       "description": "Fast, reliable IT solutions: consulting, cloud, automation, and support.",
-      "telephone": "+46-00-000 00 00",
-      "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "SE",
@@ -135,22 +156,6 @@
       "image": "https://www.preformit.se/icons/icon-192.png"
     }
     </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "url": "https://www.preformit.se/",
-      "name": "PreForm IT",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.preformit.se/search?q={query}",
-        "query-input": "required name=query"
-      }
-    }
-    </script>
-
-    <!-- Vite will inject additional modulepreload hints for chunks -->
-    <link rel="modulepreload" href="/assets/index-XXXX.js" crossorigin>
   </head>
 
   <body>
@@ -170,11 +175,10 @@
 
     <footer role="contentinfo" aria-label="Site footer"></footer>
 
-    <!-- Production bundle (Vite build replaces XXXX and adds chunk preloads) -->
-    <script type="module" src="/assets/index-XXXX.js" defer crossorigin></script>
+    <!-- ✅ Correct entry file for Vite -->
+    <script type="module" src="/src/main.tsx"></script>
 
     <script>
-      // Remove aria-busy once hydrated
       window.addEventListener('DOMContentLoaded', () => {
         const main = document.getElementById('root');
         if (main) main.removeAttribute('aria-busy');

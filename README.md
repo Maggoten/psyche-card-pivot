@@ -52,3 +52,4 @@ This project is built with:
 - Tailwind CSSfix pages
 force new deploy
 clean redeploy
+redeploy fix

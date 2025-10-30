@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // 👇 Den här raden fixar GitHub Pages base path
+  // 👇 Viktigt för GitHub Pages
   base: "/psyche-card-pivot/",
 
   server: {
@@ -19,5 +19,10 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+
+  build: {
+    outDir: "dist",
+    emptyOutDir: true,
   },
 }));

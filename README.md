@@ -51,3 +51,4 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSSfix pages
 force new deploy
+clean redeploy

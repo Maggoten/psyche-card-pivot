@@ -21,14 +21,14 @@
     <meta property="og:site_name" content="PreForm IT">
     <meta property="og:locale" content="en_US">
 
-    <!-- Twitter Card -->
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="PreForm IT — Fast and Reliable IT Solutions for Modern Businesses">
     <meta name="twitter:description" content="Fast, reliable IT solutions for modern businesses.">
     <meta name="twitter:image" content="https://www.preformit.se/og-image.jpg">
     <meta name="twitter:image:alt" content="PreForm IT — Professional IT Solutions">
 
-    <!-- PWA / Icons -->
+    <!-- Icons -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" sizes="32x32" href="/icons/icon-32.png">
     <link rel="icon" sizes="192x192" href="/icons/icon-192.png">
@@ -50,6 +50,7 @@
       :root { --bg: #0b0d12; --fg: #e9eef5; }
       html, body { height: 100%; margin: 0; }
 
+      /* Font setup */
       @font-face {
         font-family: "Inter";
         src: url("/fonts/inter-var-latin.woff2") format("woff2-variations");
@@ -118,12 +119,17 @@
       }
 
       @media (prefers-reduced-motion: reduce) {
-        * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+        * {
+          animation: none !important;
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
       }
     </style>
 
     <!-- Security -->
     <meta name="referrer" content="strict-origin-when-cross-origin">
+    <!-- ✅ Fixed CSP: removed unsupported 'frame-ancestors' and corrected syntax -->
     <meta http-equiv="Content-Security-Policy" content="
       default-src 'self';
       script-src 'self' 'unsafe-inline';
@@ -133,7 +139,6 @@
       connect-src 'self';
       base-uri 'self';
       form-action 'self';
-      frame-ancestors 'self';
       upgrade-insecure-requests;
     ">
 

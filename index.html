@@ -1,28 +1,119 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/psyche-card-pivot/favicon.ico" />
-    <title>PreForm IT</title>
-    <meta name="description" content="PreForm IT - Professional IT Solutions" />
-    <meta name="author" content="PreForm IT" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta charset="UTF-8">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>PreForm IT — Fast, Reliable Professional IT Solutions</title>
+    <meta name="description" content="PreForm IT delivers fast, reliable, and secure IT solutions for modern businesses. Consulting, cloud, automation, and support with a performance-first approach.">
+    <meta name="author" content="PreForm IT">
+    <link rel="canonical" href="https://www.example.com/">
+
+    <!-- PWA / Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" sizes="32x32" href="/icons/icon-32.png">
+    <link rel="icon" sizes="192x192" href="/icons/icon-192.png">
+    <link rel="apple-touch-icon" href="/icons/icon-192.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0b0d12">
+    <meta name="color-scheme" content="light dark">
+
+    <!-- Performance/Security -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&family=Didot:wght@400&display=swap" rel="stylesheet">
+    <!-- Preload Google Fonts CSS to cut a hop; onload swap to stylesheet -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+    </noscript>
 
-    <meta property="og:title" content="caff4996-0832-4105-9769-73395b77727e" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Minimal critical CSS (above-the-fold) -->
+    <style>
+      /* Keep this tiny; move the rest to your main CSS */
+      :root { --bg: #0b0d12; --fg: #e9eef5; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        text-rendering: optimizeLegibility;
+      }
+      .skip-link {
+        position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+      }
+      .skip-link:focus {
+        position: static; width: auto; height: auto; padding: .5rem 1rem; background: #fff; color: #000;
+      }
+      main[aria-busy="true"] { opacity: .001; } /* prevent layout shift during hydration */
+    </style>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Referrer & CSP (tune CSP for your asset domains) -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com;
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+      img-src 'self' data:;
+      font-src https://fonts.gstatic.com;
+      connect-src 'self';
+      base-uri 'self';
+      form-action 'self';
+      upgrade-insecure-requests;
+    ">
+
+    <!-- Structured data (no social links) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "PreForm IT",
+      "url": "https://www.example.com/",
+      "description": "Fast, reliable IT solutions: consulting, cloud, automation, and support.",
+      "telephone": "+46-00-000 00 00",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "SE"
+      },
+      "image": "https://www.example.com/icons/icon-192.png"
+    }
+    </script>
+
+    <!-- If you have a compiled CSS file, preload it -->
+    <!-- <link rel="preload" href="/assets/main.css" as="style">
+    <link rel="stylesheet" href="/assets/main.css"> -->
+
+    <!-- Preload the main JS (built bundle), then modulepreload for chunks -->
+    <!-- Replace with your actual build filenames (Vite injects these automatically) -->
+    <!-- <link rel="modulepreload" href="/assets/index-ABC123.js" crossorigin> -->
   </head>
 
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <a class="skip-link" href="#root">Skip to main content</a>
+
+    <header role="banner" aria-label="PreForm IT"></header>
+
+    <!-- Use <main> as your app mount for correct landmarks -->
+    <main id="root" role="main" aria-busy="true">
+      <!-- App hydrates here -->
+      <noscript>
+        JavaScript is disabled. The site needs JavaScript to load the application.
+        You can still <a href="/static/sitemap">browse our static sitemap</a>.
+      </noscript>
+    </main>
+
+    <footer role="contentinfo"></footer>
+
+    <!-- IMPORTANT: in production point to built assets, not /src/main.tsx -->
+    <script type="module" src="/assets/index-ABC123.js" crossorigin defer></script>
+    <script>
+      // Remove aria-busy once hydrated (no globals, runs in module scope)
+      window.addEventListener('DOMContentLoaded', () => {
+        const m = document.getElementById('root');
+        if (m) m.removeAttribute('aria-busy');
+      }, { once: true });
+    </script>
   </body>
 </html>

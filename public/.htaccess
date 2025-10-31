@@ -4,40 +4,49 @@
 
 # ✅ Encoding & MIME types
 AddDefaultCharset UTF-8
-AddType text/html .html
-AddType text/css .css
-AddType text/javascript .js
-AddType application/javascript .js
-AddType application/json .json
-AddType image/svg+xml .svg
-AddType font/woff2 .woff2
-AddType application/font-woff2 .woff2
+<IfModule mod_mime.c>
+  AddType text/html .html .htm
+  AddType text/css .css
+  AddType text/javascript .js
+  AddType application/javascript .js
+  AddType application/json .json
+  AddType image/svg+xml .svg
+  AddType font/woff2 .woff2
+  AddType application/font-woff2 .woff2
+</IfModule>
 
-# ✅ Disable PHP handler for .html
-RemoveHandler .html
-RemoveType .html
-
+# ✅ Directory index
 DirectoryIndex index.html
 
 # ✅ Force HTTPS
-RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  
+  # React Router fallback (must come after HTTPS redirect)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ /index.html [L]
+</IfModule>
 
-# ✅ React Router fallback
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ index.html [L]
-
-# ✅ Font CORS
+# ✅ Security & CORS headers
 <IfModule mod_headers.c>
+  # Font CORS
   <FilesMatch "\.(woff|woff2|ttf|otf)$">
     Header set Access-Control-Allow-Origin "*"
   </FilesMatch>
+  
+  # Security headers
   Header set X-Content-Type-Options "nosniff"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
   Header set X-Frame-Options "SAMEORIGIN"
   Header set X-XSS-Protection "1; mode=block"
+  
+  # Ensure HTML is served correctly
+  <FilesMatch "\.(html|htm)$">
+    Header set Content-Type "text/html; charset=UTF-8"
+  </FilesMatch>
 </IfModule>
 
 # ✅ Gzip compression

@@ -2,134 +2,42 @@
 <html lang="en" dir="ltr">
   <head>
     <!-- Essentials -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="color-scheme" content="light dark">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
     <title>PreForm IT — Fast and Reliable IT Solutions for Modern Businesses</title>
-    <meta name="description" content="PreForm IT delivers fast, reliable, and secure IT solutions for modern businesses. Consulting, cloud, automation, and support with a performance-first approach.">
-    <meta name="author" content="PreForm IT">
-    <link rel="canonical" href="https://www.preformit.se/">
-    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="description" content="PreForm IT delivers fast, reliable, and secure IT solutions for modern businesses. Consulting, cloud, automation, and support with a performance-first approach." />
+    <meta name="author" content="PreForm IT" />
+    <link rel="canonical" href="https://www.preformit.se/" />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="PreForm IT — Fast and Reliable IT Solutions for Modern Businesses">
-    <meta property="og:description" content="PreForm IT delivers fast, reliable, and secure IT solutions for modern businesses. Consulting, cloud, automation, and support.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.preformit.se/">
-    <meta property="og:image" content="https://www.preformit.se/og-image.jpg">
-    <meta property="og:image:alt" content="PreForm IT — Professional IT Solutions">
-    <meta property="og:site_name" content="PreForm IT">
-    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="PreForm IT — Fast and Reliable IT Solutions for Modern Businesses" />
+    <meta property="og:description" content="PreForm IT delivers fast, reliable and secure IT solutions for modern businesses." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.preformit.se/" />
+    <meta property="og:image" content="https://www.preformit.se/og-image.jpg" />
+    <meta property="og:site_name" content="PreForm IT" />
+    <meta property="og:locale" content="en_US" />
 
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PreForm IT — Fast and Reliable IT Solutions for Modern Businesses">
-    <meta name="twitter:description" content="Fast, reliable IT solutions for modern businesses.">
-    <meta name="twitter:image" content="https://www.preformit.se/og-image.jpg">
-    <meta name="twitter:image:alt" content="PreForm IT — Professional IT Solutions">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PreForm IT — Fast and Reliable IT Solutions for Modern Businesses" />
+    <meta name="twitter:description" content="Fast, reliable IT solutions for modern businesses." />
+    <meta name="twitter:image" content="https://www.preformit.se/og-image.jpg" />
 
     <!-- Icons -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" sizes="32x32" href="/icons/icon-32.png">
-    <link rel="icon" sizes="192x192" href="/icons/icon-192.png">
-    <link rel="apple-touch-icon" href="/icons/icon-192.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <meta name="theme-color" content="#0b0d12">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" sizes="32x32" href="/icons/icon-32.png" />
+    <link rel="icon" sizes="192x192" href="/icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0b0d12" />
 
-    <!-- Performance -->
-    <meta http-equiv="x-dns-prefetch-control" content="on">
-    <link rel="preload" href="/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <!-- Optional: Preload hero image -->
-    <!-- <link rel="preload" as="image" href="/images/hero.webp" fetchpriority="high"> -->
+    <!-- Fonts -->
+    <link rel="preload" href="/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin />
 
-    <!-- Humans -->
-    <link rel="author" type="text/plain" href="/humans.txt">
-
-    <!-- Critical CSS -->
-    <style>
-      :root { --bg: #0b0d12; --fg: #e9eef5; }
-      html, body { height: 100%; margin: 0; }
-
-      /* Font setup */
-      @font-face {
-        font-family: "Inter";
-        src: url("/fonts/inter-var-latin.woff2") format("woff2-variations");
-        font-weight: 100 900;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: "Inter Fallback";
-        src: local("Arial");
-        size-adjust: 107%;
-        ascent-override: 90%;
-        descent-override: 22%;
-        line-gap-override: 0%;
-      }
-
-      body {
-        background: var(--bg);
-        color: var(--fg);
-        font-family: Inter, "Inter Fallback", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-      }
-
-      .skip-link {
-        position: absolute;
-        left: -9999px;
-        top: auto;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-      }
-
-      .skip-link:focus {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 9999;
-        padding: 1rem 2rem;
-        background: #fff;
-        color: #000;
-        text-decoration: none;
-        font-weight: 600;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
-      }
-
-      main[aria-busy="true"] { opacity: .001; }
-
-      .noscript-message {
-        padding: 2rem;
-        max-width: 600px;
-        margin: 2rem auto;
-        background: #1a1d24;
-        border-radius: 8px;
-        text-align: center;
-      }
-
-      .noscript-message h1 {
-        margin: 0 0 .5rem;
-        color: var(--fg);
-        font-size: 1.25rem;
-      }
-
-      .noscript-message a {
-        color: #60a5fa;
-        text-decoration: underline;
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        * {
-          animation: none !important;
-          transition: none !important;
-          scroll-behavior: auto !important;
-        }
-      }
-    </style>
-
-    <!-- Security -->
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <!-- ✅ Fixed CSP: removed unsupported 'frame-ancestors' and corrected syntax -->
+    <!-- CSP -->
     <meta http-equiv="Content-Security-Policy" content="
       default-src 'self';
       script-src 'self' 'unsafe-inline';
@@ -140,27 +48,34 @@
       base-uri 'self';
       form-action 'self';
       upgrade-insecure-requests;
-    ">
+    " />
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "PreForm IT",
-      "url": "https://www.preformit.se/",
-      "logo": "https://www.preformit.se/icons/icon-192.png",
-      "description": "Fast, reliable IT solutions: consulting, cloud, automation, and support.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "SE",
-        "addressLocality": "Stockholm"
-      },
-      "geo": { "@type": "GeoCoordinates", "latitude": "59.3293", "longitude": "18.0686" },
-      "areaServed": { "@type": "Country", "name": "Sweden" },
-      "image": "https://www.preformit.se/icons/icon-192.png"
-    }
-    </script>
+    <!-- Critical CSS -->
+    <style>
+      :root { --bg: #0b0d12; --fg: #e9eef5; }
+      html, body { height: 100%; margin: 0; }
+      body {
+        background: var(--bg);
+        color: var(--fg);
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+      }
+      .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+      .skip-link:focus {
+        position: fixed; top: 0; left: 0; z-index: 9999;
+        padding: 1rem 2rem; background: #fff; color: #000;
+        text-decoration: none; font-weight: 600;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+      }
+      main[aria-busy="true"] { opacity: .001; }
+      @media (prefers-reduced-motion: reduce) {
+        * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+      }
+    </style>
+
+    <!-- ✅ Entry point for Vite -->
+    <script type="module" src="/src/main.tsx"></script>
   </head>
 
   <body>
@@ -170,18 +85,14 @@
 
     <main id="root" role="main" aria-busy="true" aria-live="polite">
       <noscript>
-        <div class="noscript-message">
+        <div style="padding:2rem;max-width:600px;margin:2rem auto;background:#1a1d24;border-radius:8px;text-align:center;">
           <h1>JavaScript Required</h1>
           <p>This application requires JavaScript to function. Please enable JavaScript in your browser settings.</p>
-          <p>If you're unable to enable JavaScript, contact us at <a href="mailto:info@preformit.se">info@preformit.se</a>.</p>
         </div>
       </noscript>
     </main>
 
     <footer role="contentinfo" aria-label="Site footer"></footer>
-
-    <!-- ✅ Correct entry file for Vite -->
-    <script type="module" src="/src/main.tsx"></script>
 
     <script>
       window.addEventListener('DOMContentLoaded', () => {

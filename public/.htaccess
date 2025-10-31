@@ -1,7 +1,8 @@
 # ===========================================
-# ✅ MissHosting fix — HTML handler & charset
+# ⚙️ PreForm IT — MissHosting optimized .htaccess
 # ===========================================
 
+# ✅ Encoding & MIME types
 AddDefaultCharset UTF-8
 AddType text/html .html
 AddType text/css .css
@@ -9,20 +10,55 @@ AddType text/javascript .js
 AddType application/javascript .js
 AddType application/json .json
 AddType image/svg+xml .svg
+AddType font/woff2 .woff2
 AddType application/font-woff2 .woff2
 
-# 👇 This line is crucial on MissHosting!
+# ✅ Disable PHP handler for .html
 RemoveHandler .html
 RemoveType .html
 
-DirectoryIndex index.html index.htm
+DirectoryIndex index.html
 
-# ===========================================
-# ✅ React / Vite SPA fallback (optional)
-# ===========================================
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^ index.html [L]
+# ✅ Force HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ✅ React Router fallback
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
+
+# ✅ Font CORS
+<IfModule mod_headers.c>
+  <FilesMatch "\.(woff|woff2|ttf|otf)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
 </IfModule>
+
+# ✅ Gzip compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# ✅ Cache static assets
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# ✅ Protect hidden files
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>

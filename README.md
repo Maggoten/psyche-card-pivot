@@ -50,7 +50,3 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSSfix pages
-force new deploy
-clean redeploy
-redeploy fix
-clean rebuild

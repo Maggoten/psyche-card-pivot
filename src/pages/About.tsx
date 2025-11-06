@@ -23,13 +23,13 @@ const About = () => {
           <div className="space-y-6">
             {/* Digital Transformation */}
             <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-border/20">
-              <h2 className="font-display text-2xl font-medium tracking-tight text-foreground mb-4">
+              <h2 className="font-display text-2xl font-medium tracking-tight text-foreground mb-4 text-center">
                 Digital Transformation
               </h2>
-              <p className="text-muted-foreground font-body leading-relaxed mb-4">
+              <p className="text-muted-foreground font-body leading-relaxed mb-4 text-center">
                 We guide organizations through comprehensive digital transformation initiatives, modernizing legacy systems and processes to meet today's digital demands. Our approach ensures seamless transitions while maintaining operational continuity.
               </p>
-              <ul className="text-muted-foreground font-body leading-relaxed list-disc list-inside space-y-2">
+              <ul className="text-muted-foreground font-body leading-relaxed list-disc list-inside space-y-2 text-center">
                 <li>Legacy system modernization</li>
                 <li>Digital workflow optimization</li>
                 <li>Change management and training</li>
@@ -39,13 +39,13 @@ const About = () => {
 
             {/* Technical Program Manager Consultants */}
             <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-border/20">
-              <h2 className="font-display text-2xl font-medium tracking-tight text-foreground mb-4">
+              <h2 className="font-display text-2xl font-medium tracking-tight text-foreground mb-4 text-center">
                 Technical Program Manager Consultants
               </h2>
-              <p className="text-muted-foreground font-body leading-relaxed mb-4">
+              <p className="text-muted-foreground font-body leading-relaxed mb-4 text-center">
                 Our experienced Technical Program Managers provide strategic oversight for complex technology initiatives, ensuring projects are delivered on time, within budget, and aligned with business objectives.
               </p>
-              <ul className="text-muted-foreground font-body leading-relaxed list-disc list-inside space-y-2">
+              <ul className="text-muted-foreground font-body leading-relaxed list-disc list-inside space-y-2 text-center">
                 <li>Program planning and execution</li>
                 <li>Cross-functional team leadership</li>
                 <li>Risk assessment and mitigation</li>
@@ -55,13 +55,13 @@ const About = () => {
 
             {/* System Integration */}
             <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-border/20">
-              <h2 className="font-display text-2xl font-medium tracking-tight text-foreground mb-4">
+              <h2 className="font-display text-2xl font-medium tracking-tight text-foreground mb-4 text-center">
                 System Integration
               </h2>
-              <p className="text-muted-foreground font-body leading-relaxed mb-4">
+              <p className="text-muted-foreground font-body leading-relaxed mb-4 text-center">
                 Connect your existing systems with new digital processes for optimal efficiency. We ensure seamless data flow between platforms while maintaining security and performance standards.
               </p>
-              <ul className="text-muted-foreground font-body leading-relaxed list-disc list-inside space-y-2">
+              <ul className="text-muted-foreground font-body leading-relaxed list-disc list-inside space-y-2 text-center">
                 <li>API development and integration</li>
                 <li>Database synchronization</li>
                 <li>Middleware solutions</li>
@@ -71,13 +71,13 @@ const About = () => {
 
             {/* Data Collection */}
             <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-border/20">
-              <h2 className="font-display text-2xl font-medium tracking-tight text-foreground mb-4">
+              <h2 className="font-display text-2xl font-medium tracking-tight text-foreground mb-4 text-center">
                 Data Collection
               </h2>
-              <p className="text-muted-foreground font-body leading-relaxed mb-4">
+              <p className="text-muted-foreground font-body leading-relaxed mb-4 text-center">
                 Implement robust web-based data collection systems that ensure accuracy, compliance, and accessibility. Our solutions handle everything from simple surveys to complex multi-step data gathering processes.
               </p>
-              <ul className="text-muted-foreground font-body leading-relaxed list-disc list-inside space-y-2">
+              <ul className="text-muted-foreground font-body leading-relaxed list-disc list-inside space-y-2 text-center">
                 <li>Web-based data capture platforms</li>
                 <li>Real-time data validation</li>
                 <li>Secure data storage and processing</li>
@@ -87,13 +87,13 @@ const About = () => {
 
             {/* Forms Management */}
             <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-border/20">
-              <h2 className="font-display text-2xl font-medium tracking-tight text-foreground mb-4">
+              <h2 className="font-display text-2xl font-medium tracking-tight text-foreground mb-4 text-center">
                 Forms Management
               </h2>
-              <p className="text-muted-foreground font-body leading-relaxed mb-4">
+              <p className="text-muted-foreground font-body leading-relaxed mb-4 text-center">
                 Transform complex paper-based forms into intuitive digital experiences. We design and implement form solutions that reduce processing time, eliminate errors, and improve user satisfaction.
               </p>
-              <ul className="text-muted-foreground font-body leading-relaxed list-disc list-inside space-y-2">
+              <ul className="text-muted-foreground font-body leading-relaxed list-disc list-inside space-y-2 text-center">
                 <li>Digital form design and development</li>
                 <li>Automated validation and processing</li>
                 <li>Multi-channel form deployment</li>

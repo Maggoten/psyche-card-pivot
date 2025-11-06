@@ -29,7 +29,7 @@ const About = () => {
               <p className="text-muted-foreground font-body leading-relaxed mb-4 text-center">
                 We guide organizations through comprehensive digital transformation initiatives, modernizing legacy systems and processes to meet today's digital demands. Our approach ensures seamless transitions while maintaining operational continuity.
               </p>
-              <ul className="text-muted-foreground font-body leading-relaxed space-y-2 text-center list-none">
+              <ul className="text-muted-foreground font-body leading-relaxed space-y-2 list-disc list-inside max-w-md mx-auto">
                 <li>Legacy system modernization</li>
                 <li>Digital workflow optimization</li>
                 <li>Change management and training</li>
@@ -45,7 +45,7 @@ const About = () => {
               <p className="text-muted-foreground font-body leading-relaxed mb-4 text-center">
                 Our experienced Technical Program Managers provide strategic oversight for complex technology initiatives, ensuring projects are delivered on time, within budget, and aligned with business objectives.
               </p>
-              <ul className="text-muted-foreground font-body leading-relaxed space-y-2 text-center list-none">
+              <ul className="text-muted-foreground font-body leading-relaxed space-y-2 list-disc list-inside max-w-md mx-auto">
                 <li>Program planning and execution</li>
                 <li>Cross-functional team leadership</li>
                 <li>Risk assessment and mitigation</li>
@@ -61,7 +61,7 @@ const About = () => {
               <p className="text-muted-foreground font-body leading-relaxed mb-4 text-center">
                 Connect your existing systems with new digital processes for optimal efficiency. We ensure seamless data flow between platforms while maintaining security and performance standards.
               </p>
-              <ul className="text-muted-foreground font-body leading-relaxed space-y-2 text-center list-none">
+              <ul className="text-muted-foreground font-body leading-relaxed space-y-2 list-disc list-inside max-w-md mx-auto">
                 <li>API development and integration</li>
                 <li>Database synchronization</li>
                 <li>Middleware solutions</li>
@@ -77,7 +77,7 @@ const About = () => {
               <p className="text-muted-foreground font-body leading-relaxed mb-4 text-center">
                 Implement robust web-based data collection systems that ensure accuracy, compliance, and accessibility. Our solutions handle everything from simple surveys to complex multi-step data gathering processes.
               </p>
-              <ul className="text-muted-foreground font-body leading-relaxed space-y-2 text-center list-none">
+              <ul className="text-muted-foreground font-body leading-relaxed space-y-2 list-disc list-inside max-w-md mx-auto">
                 <li>Web-based data capture platforms</li>
                 <li>Real-time data validation</li>
                 <li>Secure data storage and processing</li>
@@ -93,7 +93,7 @@ const About = () => {
               <p className="text-muted-foreground font-body leading-relaxed mb-4 text-center">
                 Transform complex paper-based forms into intuitive digital experiences. We design and implement form solutions that reduce processing time, eliminate errors, and improve user satisfaction.
               </p>
-              <ul className="text-muted-foreground font-body leading-relaxed space-y-2 text-center list-none">
+              <ul className="text-muted-foreground font-body leading-relaxed space-y-2 list-disc list-inside max-w-md mx-auto">
                 <li>Digital form design and development</li>
                 <li>Automated validation and processing</li>
                 <li>Multi-channel form deployment</li>

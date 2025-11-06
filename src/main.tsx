@@ -3,9 +3,9 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App.tsx";
 import "./index.css";
 
-// 🧩 Lägg in BrowserRouter med basename för GitHub Pages
+// 🧩 BrowserRouter for custom domain
 createRoot(document.getElementById("root")!).render(
-  <BrowserRouter basename="/psyche-card-pivot">
+  <BrowserRouter>
     <App />
   </BrowserRouter>
 );

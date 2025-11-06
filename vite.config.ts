@@ -1,16 +1,12 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { componentTagger } from "lovable-tagger";
 
 // ✅ Vite config for PreForm IT (MissHosting + custom domain)
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   base: "/", // ✅ since you're hosting on your own domain (https://www.preformit.se)
 
-  plugins: [
-    react(),
-    mode === 'development' && componentTagger(),
-  ].filter(Boolean),
+  plugins: [react()],
 
   resolve: {
     alias: {
@@ -41,12 +37,12 @@ export default defineConfig(({ mode }) => ({
   },
 
   server: {
-    host: "::",
-    port: 8080,
+    host: "0.0.0.0",
+    port: 5173,
   },
 
   preview: {
     port: 4173,
     open: true,
   },
-}));
+});
